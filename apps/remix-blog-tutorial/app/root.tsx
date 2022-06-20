@@ -3,7 +3,16 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@re
 import tailwindStylesheetUrl from './styles/tailwind.css';
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: tailwindStylesheetUrl }];
+  return [
+    {
+      rel: 'stylesheet',
+      href: tailwindStylesheetUrl,
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap',
+    },
+  ];
 };
 
 export const meta: MetaFunction = () => ({
@@ -14,12 +23,12 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <head>
         <Meta />
         <Links />
       </head>
-      <body className="h-full">
+      <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

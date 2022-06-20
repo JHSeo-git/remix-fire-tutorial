@@ -30,6 +30,7 @@
     "@remix-run/dev": "^1.6.0",
     "@remix-run/eslint-config": "^1.6.0",
     "@remix-run/serve": "^1.6.0",
+    "@tailwindcss/typography": "^0.5.2",
     "@types/bcryptjs": "^2.4.2",
     "@types/marked": "^4.0.3",
     "@types/react": "^18.0.14",

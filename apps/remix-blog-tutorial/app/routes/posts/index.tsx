@@ -16,15 +16,21 @@ export const loader = async () => {
 export default function Posts() {
   const { posts } = useLoaderData<LoaderData>();
   return (
-    <main>
-      <h1>Posts</h1>
-      <Link to="admin" className="text-red-600 underline">
-        Admin
-      </Link>
+    <main className="container mx-auto max-w-2xl p-10">
+      <div className="flex items-center justify-between">
+        <h1 className="text-4xl font-bold">Posts</h1>
+        <Link to="admin" className="btn btn-primary">
+          Admin
+        </Link>
+      </div>
+      <div className="divider" />
       <ul>
         {posts.map((post) => (
-          <li key={post.slug}>
-            <Link to={post.slug} className="text-blue-600 underline">
+          <li className="my-2" key={post.slug}>
+            <Link
+              to={post.slug}
+              className="btn btn-block btn-ghost justify-start text-info text-xl"
+            >
               {post.title}
             </Link>
           </li>

@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./app/**/*.{ts,tsx,js,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
+    },
   },
-  plugins: [require('daisyui')],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
 };
