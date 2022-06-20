@@ -1,0 +1,19 @@
+{
+  "name": "remix-fire",
+  "description": "Remix playground",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "https://github.com/JHSeo-git/remix-fire.git",
+  "author": "JHSeo <qnfqnfqnf@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
+}

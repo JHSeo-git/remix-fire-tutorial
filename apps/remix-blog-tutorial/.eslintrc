@@ -1,0 +1,5 @@
+{
+  "extends": ["@remix-run/eslint-config", "@remix-run/eslint-config/node"]
+}
+
+// @see https://github.com/remix-run/remix/blob/main/packages/remix-eslint-config/package.json
