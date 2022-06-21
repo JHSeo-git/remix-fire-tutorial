@@ -1,6 +1,6 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
-import { Link, Outlet, useLoaderData, useNavigate } from '@remix-run/react';
+import { Link, Outlet, useLoaderData } from '@remix-run/react';
 
 import { getPosts } from '~/models/post.server';
 
@@ -14,15 +14,9 @@ export const loader: LoaderFunction = async () => {
 
 export default function PostAdmin() {
   const { posts } = useLoaderData<LoaderData>();
-  const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto max-w-2xl p-10">
-      <nav className="navbar">
-        <button onClick={() => navigate(-1)} className="btn btn-ghost">
-          back
-        </button>
-      </nav>
+    <>
       <h1 className="text-6xl font-bold text-center">Admin</h1>
       <div className="divider" />
       <div className="grid grid-cols-4 gap-6">
@@ -30,7 +24,7 @@ export default function PostAdmin() {
           <ul>
             {posts.map((post) => (
               <li className="mb-4" key={post.slug}>
-                <Link to={post.slug} className="btn btn-block btn-primary">
+                <Link to={post.slug} className="link">
                   {post.title}
                 </Link>
               </li>
@@ -41,6 +35,6 @@ export default function PostAdmin() {
           <Outlet />
         </main>
       </div>
-    </div>
+    </>
   );
 }

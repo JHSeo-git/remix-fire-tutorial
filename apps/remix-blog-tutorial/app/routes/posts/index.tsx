@@ -15,8 +15,9 @@ export const loader = async () => {
 
 export default function Posts() {
   const { posts } = useLoaderData<LoaderData>();
+
   return (
-    <main className="container mx-auto max-w-2xl p-10">
+    <>
       <div className="flex items-center justify-between">
         <h1 className="text-4xl font-bold">Posts</h1>
         <Link to="admin" className="btn btn-primary">
@@ -36,6 +37,6 @@ export default function Posts() {
           </li>
         ))}
       </ul>
-    </main>
+    </>
   );
 }

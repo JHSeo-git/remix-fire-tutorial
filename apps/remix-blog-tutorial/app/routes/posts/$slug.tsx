@@ -1,6 +1,6 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { json } from '@remix-run/node';
-import { useLoaderData, useNavigate } from '@remix-run/react';
+import { useLoaderData } from '@remix-run/react';
 import { marked } from 'marked';
 import invariant from 'tiny-invariant';
 
@@ -22,18 +22,12 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export default function PostSlug() {
   const { post, html } = useLoaderData<LoaderData>();
-  const navigate = useNavigate();
 
   return (
-    <main className="container mx-auto max-w-2xl p-10">
-      <nav className="navbar">
-        <button onClick={() => navigate(-1)} className="btn btn-ghost">
-          back
-        </button>
-      </nav>
+    <>
       <h1 className="text-6xl font-bold text-center">{post.title}</h1>
-      <div className="divider" />
+      <div className="divider my-10" />
       <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
-    </main>
+    </>
   );
 }
