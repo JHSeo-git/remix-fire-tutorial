@@ -74,13 +74,21 @@ export default function EditPost() {
   const transition = useTransition();
   const isUpdating = Boolean(transition.submission);
 
+  console.log(post.title);
+
   return (
-    <Form method="post">
+    <Form method="post" replace>
       <div className="form-control w-full max-w-ws">
         <label className="label">
           <span className="label-text">Post Title</span>
         </label>
-        <input type="text" name="title" className={inputClassName} defaultValue={post.title} />
+        <input
+          type="text"
+          name="title"
+          className={inputClassName}
+          key={post.title}
+          defaultValue={post.title}
+        />
         <label className="label">
           <span className="label-text-alt text-error">{errors?.title ? errors.title : null}</span>
         </label>
@@ -92,7 +100,8 @@ export default function EditPost() {
         <input
           type="text"
           name="slug"
-          className={inputClassName}
+          className={[inputClassName, 'btn-disabled'].join(' ')}
+          key={post.slug}
           defaultValue={post.slug}
           readOnly
         />
@@ -109,6 +118,7 @@ export default function EditPost() {
           rows={20}
           name="markdown"
           className={`textarea textarea-bordered h-96 font-mono`}
+          key={post.markdown}
           defaultValue={post.markdown}
         />
         <label className="label">
