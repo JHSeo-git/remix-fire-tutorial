@@ -6,7 +6,7 @@
   "scripts": {
     "build": "concurrently \"yarn:build:*\"",
     "build:remix": "remix build",
-    "build:tw": "yarn tw -- --minify",
+    "build:tw": "yarn tw --minify",
     "dev": "concurrently \"yarn:dev:*\"",
     "dev:remix": "PORT=3060 remix dev && yarn dev:tw",
     "dev:tw": "yarn tw --watch",
