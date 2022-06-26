@@ -1,5 +1,5 @@
 {
-  "name": "@apps/remix-blog-tutorial",
+  "name": "@remix-fire-tutorial/remix-blog-tutorial",
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
