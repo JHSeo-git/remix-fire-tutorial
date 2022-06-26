@@ -1,5 +1,6 @@
-# remix-fire
-remix-fire
+# remix-fire-tutorial
+
+remix-fire-tutorial
 
 ## LICENCE
 
