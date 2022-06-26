@@ -16,7 +16,7 @@ node_modules
 /api/index.js
 /api/index.js.map
 
-/prisma/data.db
-/prisma/data.db-journal
+/prisma/dev.db
+/prisma/dev.db-journal
 
 /app/styles/tailwind.css

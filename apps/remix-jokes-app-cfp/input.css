@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 3px 5px 7px var(--tw-shadow-color);
+    --tw-shadow-color: rgb(0 0 0 / 50%);
+  }
+}
